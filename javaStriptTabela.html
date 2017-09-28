@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Exemplo Java Script</title>
+<script>
+	function init(){
+		var btnAdd = document.getElementById("btnAdd");
+		btnAdd.onclick = function (){
+			var inputs = document.getElementsByTagName("input");
+			var linha = document.createElement("tr");
+			for (var i = 0; i < inputs.length; i++){
+				var input = inputs[i];
+				var valor = input.value;
+				if(!valor){
+					var nome = input.name;
+					alert("O campo "+nome+" esta vazio!");
+					return;
+				}
+				var celula = document.createElement("td");
+				celula.innerText = valor;
+				linha.appendChild(celula);
+			
+			}
+				var celula = document.createElement("td");
+				var remover = document.createElement("button");
+				remover.innerText = "Remover";
+				remover.onclick = function(){
+					document.getElementById("lista_alunos").removeChild(linha);
+					var span = document.getElementById("total_alunos");
+					var total = span.innerText;
+					total--;
+				}
+				celula.appendChild(remover);
+				linha.appendChild(celula);
+				document.getElementById("lista_alunos").appendChild(linha);
+				var span = document.getElementById("total_alunos");
+				var total = span.innerText;
+				total++;
+				span.innerText = total;
+			for (var i = 0; i < inputs.length; i++){
+				inputs[i].value = "";
+				}
+		}	
+	}
+	
+
+
+</script>
+</head>
+<body onload="init() ;">
+	<h1>Adicionar Nota de Alunos</h1>
+<div id="novo_aluno">
+	<label for="nome">Nome:</label>
+	<input type="text" name="nome" id="input_nome"><br>
+	<label for="nota1">Nota 1:</label>
+	<input type="number" name="nota1" id="input_nota1"><br>
+	<label for="nota2">Nota 2:</label>
+	<input type="number" name="nota2" id="input_nota2"><br>
+	<button type="button" name="btnAdd" id="btnAdd">Adicionar</button>
+</div>
+<div id="alunos">
+	<table id="lista_alunos" border="1">
+		<tr>
+			<th>Aluno</th>
+			<th>Nota 1</th>
+			<th>Nota 2</th>
+			<th>Ações</th>
+		
+		</tr>
+	</table>
+	Total: <span id="total_alunos">0</span>
+</div>
+</body>
+
+</html>
