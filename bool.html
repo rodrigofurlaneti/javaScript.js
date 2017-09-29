@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Exemplo Java Script - Calculo de IMC</title>
+<script>
+		function init()
+		{
+			var temp1 = document.getElementById("temp1");
+			var temp2 = document.getElementById("temp2");
+			var temp3 = document.getElementById("temp3");
+			var temp4 = document.getElementById("temp4");
+			if (temp1.value < temp2.value && temp3.value == temp4.value)
+				alert("Temp 1 e menor que temp 2 E temp 3 e igual a temp 4");
+			else{
+				if (temp1.value < temp2.value || temp3.value == temp4.value)
+					alert("Temp 1 e menor que temp 2 OU temp 3 e igual a temp 4");	
+			}
+			
+		}	
+	
+</script>
+</head>
+<body>
+	<h1>LOGICA BOOLEANA</h1>
+	<div>
+		<label for="temp1">Temp 1:</label>
+		<input type="text" name="temp1" id="temp1"><br>
+		<label for="temp2">Temp 2:</label>
+		<input type="text" name="temp2" id="temp2"><br>
+		<label for="temp3">Temp 3:</label>
+		<input type="text" name="temp3" id="temp3"><br>
+		<label for="temp4">Temp 4:</label>
+		<input type="text" name="temp4" id="temp4"><br>
+		<button type="button" name="btnCalcular" id="btnCalcular" onclick="init() ;">Calcular</button>
+	</div>
+</body>
+
+</html>
