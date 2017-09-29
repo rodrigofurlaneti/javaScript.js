@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Exemplo Java Script - Calculadora JS</title>
+<script>
+	var operacaoMatematica = "";
+	entradaInicial = prompt("Entre com o primeiro valor");
+	var resultado = parseInt(entradaInicial);
+	var novaEntradaString, n1;
+	while (operacaoMatematica != "fim")
+	{
+		operacaoMatematica = prompt("Entre com uma letra para escolher a operação de matemática: a(+), s(-), m(*), d(/) ou fim para encerrar");
+		if (operacaoMatematica != "fim")
+		{
+			novaEntradaString = prompt("Entre com o próximo número");
+			n1 = parseInt(novaEntradaString);
+			if (operacaoMatematica == "a") resultado = resultado + n1;
+			if (operacaoMatematica == "s") resultado = resultado - n1;
+			if (operacaoMatematica == "m") resultado = resultado * n1;	
+			if (operacaoMatematica == "d") resultado = resultado / n1;
+			alert("O resultado até o momento é : " +resultado);	
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>Calculadora JS</h1>
+	<div>
+		
+	</div>
+</body>
+
+</html>
