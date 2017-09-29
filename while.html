@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Exemplo Java Script - While</title>
+<script>
+	var novaEntradaString = "0";
+	var resultadoSomas = 0;
+	while (novaEntradaString != "fim")
+	{
+		novaEntradaString = prompt("Entre com um número para somar, ou digite fim para encerrar");
+		if (novaEntradaString == "fim")
+		{
+			alert("O resultado até o momento é: " + resultadoSomas);
+		}
+		else
+		{
+			n1 = parseInt(novaEntradaString);
+			resultadoSomas = resultadoSomas + n1;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>WHILE</h1>
+	<div>
+		
+	</div>
+</body>
+
+</html>
