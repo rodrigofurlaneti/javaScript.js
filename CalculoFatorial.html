@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Exemplo Java Script - Cálculo de Fatorial em um Loop</title>
+<script>
+		function init()
+		{
+			var entrada = document.getElementById("entrada");
+			console.log(entrada.value);
+			resultado = document.getElementById("entrada");
+			console.log(resultado.value);
+			resultado1 = 0;
+			console.log(resultado1);
+			while (entrada.value > 1){
+				entrada = entrada.value - 1;
+				console.log(entrada);
+				resultado1 = resultado.value * entrada;
+				console.log(resultado1);
+			}
+			alert("O fatorial é " + resultado1);
+		}	
+	
+</script>
+</head>
+<body>
+	<h1>Cálculo de Fatorial em um Loop</h1>
+	<div>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome"><br>
+		<label for="entrada">Entre com um número:</label>
+		<input type="text" name="entrada" id="entrada"><br>
+		<button type="button" name="btnCalcular" id="btnCalcular" onclick="init() ;">Calcular</button>
+	</div>
+</body>
+
+</html>
