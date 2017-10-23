@@ -1,0 +1,48 @@
+(function (){
+	var arr = [];
+	function something(){
+		console.log(arr);
+	}
+	arr.push(1);
+	arr.push(2);
+	something();
+})();
+
+var out = 'May 25, 1977';
+let out2 = 'Jun 20, 1980';
+if(true){
+	var out = 'May 25, 1983';
+	let out2 = 'May 19, 1999';
+}
+out;
+out2;
+
+(function (){
+	var princess = 'Leia';
+	console.log(princess);
+})();
+console.log(princess);
+
+StromtropperController.getAll.bind(StromtropperController);
+
+function sith(){
+	console.log(this);
+}
+
+var lordSith = sith.bind('Darth Bane');
+
+lordSith();
+
+var lords = sith.bind(19);
+
+sith.call({  name: "Darth Maul"});
+
+sith.apply({ name: "Darth Vander"});
+
+var studios = ['20th Century Fox', 'Warner Bros', 'Walt Disney Pictures'];
+
+studios.map(function(s){
+	return s.length;
+});
+
+studios.map(s => s.length);
